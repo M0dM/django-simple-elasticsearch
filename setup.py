@@ -13,8 +13,7 @@ readme = open('README.rst').read()
 history = open('HISTORY.rst').read().replace('.. :changelog:', '')
 
 requirements = [
-    'elasticsearch>=1.0.0,<2.0.0',
-    'elasticsearch-dsl>=0.0.2'
+    'elasticsearch>=2.0.0,<3.0.0',
 ]
 
 test_requirements = [
@@ -41,7 +40,7 @@ setup(
     install_requires=requirements,
     license="BSD",
     zip_safe=False,
-    keywords='django simple elasticsearch search indexing haystack',
+    keywords='django simple elasticsearch search indexing',
     classifiers=[
         'Development Status :: 4 - Beta',
         'License :: OSI Approved :: BSD License',
@@ -57,6 +56,7 @@ setup(
         'Programming Language :: Python :: 3',
         'Programming Language :: Python :: 3.3',
         'Programming Language :: Python :: 3.4',
+        'Programming Language :: Python :: 3.5',
     ],
     test_suite='runtests.runtests',
     tests_require=test_requirements
