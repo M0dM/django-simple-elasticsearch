@@ -22,7 +22,7 @@ def add_blog(request):
         context = {
             'form': form,
         }
-        return render(request, 'blog/add_post.html', context)
+        return render(request, 'blog/add_plog.html', context)
 
 
 def add_post(request):
