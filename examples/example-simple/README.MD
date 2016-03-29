@@ -18,7 +18,7 @@ docker run --rm elasticsearch:1
 ### Python virtual environment
 
 ```bash
-pew new mealit
+pew new dse-example-simple 
 pip install -r requirements/requirements.txt
 ```
 
@@ -27,21 +27,18 @@ pip install -r requirements/requirements.txt
 ### Elastic Search index recreation
 
 ```bash
-cd mealit_website
 ./manage.py es_manage --rebuild
 ```
 
 ### Database schema update
 
 ```bash
-cd mealit_website
 ./manage.py migrate
 ```
 
 ### Development server launch
 
 ```bash
-cd mealit_website
 ./manage.py runserver
 
 ```
