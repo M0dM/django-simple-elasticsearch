@@ -1,0 +1,12 @@
+{% load i18n %}
+
+{% block page_content %}
+
+<h1>Add post</h1>
+<form action="{% url 'blog:add_post' %}" method="post">
+    {{ form.as_p }}
+    {% csrf_token %}
+</form>
+
+{% endblock %}
+
