@@ -9,7 +9,7 @@ This example has a single document type.
 
 ## Prerequisites
 
-### Elasticsearch (Optionnal : use docker for the example)
+### Elasticsearch
 
 ```bash
 docker run --rm elasticsearch:1
