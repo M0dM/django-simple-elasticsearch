@@ -1,8 +1,12 @@
+{% extends 'blog/_base.html' %}
 {% load i18n %}
+
+{% block page_header %}
+    <h1>{% trans 'Add blog' %}</h1>
+{% endblock %}
 
 {% block page_content %}
 
-<h1>Add blog</h1>
 <form action="{% url 'blog:add_blog' %}" method="post">
     {{ form.as_p }}
     {% csrf_token %}
