@@ -12,7 +12,7 @@ This example has a single document type.
 ### Elasticsearch
 
 ```bash
-docker run --rm elasticsearch:1
+docker run --net=host --rm elasticsearch:1
 ```
 
 ### Python virtual environment
