@@ -4,20 +4,54 @@
 {% block page_content %}
 
 <h2>{% trans 'Hey, I am happy to see you there !' %}</h2>
-<p>{% trans 'Checkout our blog posts below' %}</p>
+<p>{% trans 'Checkout our blog posts bellow.' %}</p>
 
+<br>
+
+<div>
+<p>{% trans 'Actions' %}</p>
 <a href="{% url 'blog:add_blog' %}">Add blog</a>
 <a href="{% url 'blog:add_post' %}">Add post</a>
+</div>
 
-<br>
-<br>
+{% if blogs %}
 
 <table>
+  <caption>{% trans 'Blogs' %}</caption>
+  <tr>
+    <th>{% trans 'Name' %}</th>
+    <th>{% trans 'Description'%}</th>
+    <th>{% trans 'Actions' %}</th>
+  </tr>
+  {% for blog in blogs  %}
+
+  <tr>
+    <td>{{ blog.name }}</td>
+    <td>{{ blog.description }}</td>
+    <td>
+      <a href="{% url 'blog:remove_blog' blog.id %}">Remove</a>
+    </td>
+  </tr>
+
+  {% endfor %}
+</table>
+
+{% else %}
+
+<p>{% trans 'No blog registered yet.' %}</p>
+
+{% endif %}
+
+{% if posts %}
+
+<table>
+  <caption>{% trans 'Blog posts' %}</caption>
   <tr>
     <th>{% trans 'Date'  %}</th>
     <th>{% trans 'Blog name' %}</th>
     <th>{% trans 'Post title' %}</th>
     <th>{% trans 'Post content'%}</th>
+    <th>{% trans 'Actions' %}</th>
   </tr>
   {% for post in posts  %}
 
@@ -26,10 +60,21 @@
     <td>{{ post.blog }}</td>
     <td>{{ post.title }}</td>
     <td>{{ post.body }}</td>
+    <td>
+      <a href="{% url 'blog:remove_post' post.id %}">Remove</a>
+    </td>
   </tr>
 
   {% endfor %}
 </table>
+
+
+{% else %}
+
+<p>{% trans 'No posts registered yet.' %}</p>
+
+
+{% endif %}
 
 {% endblock %}
 
