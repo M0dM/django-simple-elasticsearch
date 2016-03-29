@@ -5,5 +5,30 @@
 <h2>{% trans 'Hey, I am happy to see you there !' %}</h2>
 <p>{% trans 'Checkout our blog posts below' %}</p>
 
+<a href="{% url 'blog:add_blog' %}">Add blog</a>
+<a href="{% url 'blog:add_post' %}">Add post</a>
+
+<br>
+<br>
+
+<table>
+  <tr>
+    <th>{% trans 'Date'  %}</th>
+    <th>{% trans 'Blog name' %}</th>
+    <th>{% trans 'Post title' %}</th>
+    <th>{% trans 'Post content'%}</th>
+  </tr>
+  {% for post in posts  %}
+
+  <tr>
+    <td>{{ post.created_at }}</td>
+    <td>{{ post.blog }}</td>
+    <td>{{ post.title }}</td>
+    <td>{{ post.body }}</td>
+  </tr>
+
+  {% endfor %}
+</table>
+
 {% endblock %}
 

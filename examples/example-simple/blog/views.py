@@ -2,10 +2,15 @@ from django.contrib import messages
 from django.shortcuts import render, redirect
 from django.utils.translation import ugettext_lazy as _
 from .forms import BlogForm, BlogPostForm
+from .models import BlogPost
 
 
 def index(request):
-    return render(request, 'blog/index.html')
+    posts = BlogPost.objects.all()
+    context = {
+        'posts': posts,
+    }
+    return render(request, 'blog/index.html', context)
 
 
 def add_blog(request):
