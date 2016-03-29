@@ -1,2 +1,7 @@
 pytest
+pytest-django 
+pyquery
 factory_boy
+pytest_factoryboy
+coverage
+pytest-cov
