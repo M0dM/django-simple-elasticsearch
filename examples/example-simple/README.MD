@@ -59,6 +59,5 @@ pip install -r requirements/requirements.txt
 py.test
 ```
 
-*Elasticsearch must be started before performing this action using one of the method listed above.*
-
 Execute this command inside the project root directory (example-simple).
+*Elasticsearch must be started before performing this action using one of the method listed above.*
