@@ -115,3 +115,5 @@ Session.vim
 .netrwhist
 *~
 
+#####=== Other ===#####
+db.sqlite3

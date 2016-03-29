@@ -1,0 +1,4 @@
+django-debug-toolbar
+flake8
+autopep8
+pip-tools

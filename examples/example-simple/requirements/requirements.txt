@@ -1,2 +1,3 @@
 -r reqs_base.txt
--r reqs_dev.txt
+-r reqs_tools.txt
+-r reqs_test.txt

@@ -1,0 +1,22 @@
+{% load static %}
+{% load i18n %}
+
+<!DOCTYPE html>
+<html>
+  <head lang="{% get_current_language as LANGUAGE_CODE %}">
+  
+    <title>{% trans 'blog' %}</title>
+    {% include 'blog/_meta.html' %}
+    {% include 'blog/_style./html %}
+
+  </head>
+  <body>
+
+    {% block page_header %}
+    {% end_block %}
+
+    {% block page_content %}
+    {% end_block %}
+
+  </body>
+<html>
