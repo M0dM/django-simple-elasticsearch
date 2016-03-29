@@ -59,6 +59,9 @@ docs/_build/
 # PyBuilder
 target/
 
+# Pyenv
+.python-version
+
 #####=== JetBrains ===#####
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio
 
